@@ -11,6 +11,8 @@ class Minify
     {
         $response = $next($request);
 
+ //echo config('minify.level');
+
         if ($this->isResponseObject($response) && $this->isHtmlResponse($response)) {
             $replace = [
               '/\>[^\S ]+/s'                                                      => '>',
@@ -27,6 +29,10 @@ class Minify
               '/,[\r\n\t ]?{[\r\n\t ]+/s'                                         => ',{',
               '/\),[\r\n\t ]+/s'                                                  => '),',
               '~([\r\n\t ])?([a-zA-Z0-9]+)=\"([a-zA-Z0-9_\\-]+)\"([\r\n\t ])?~s'  => '$1$2=$3$4', 
+              '/(?:(?:\/\*(?:[^*]|(?:\*+[^*\/]))*\*+\/)|(?:(?<!\:|\\\|\')\/\/.*))/' => '',
+              '/<!--(?!<!)[^\[>].*?-->/' => '',
+              '/\n/'=>'',
+              '/<\/li>/'=>'',
             ];
             
             $response->setContent(preg_replace(array_keys($replace), array_values($replace), $response->getContent()));
