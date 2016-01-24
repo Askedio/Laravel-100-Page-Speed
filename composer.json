@@ -1,0 +1,14 @@
+{
+    "name": "gcphost/laravel-100-page-speed",
+    "description": "100 Page Speed Module for Laravel 5",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "william bowman",
+            "email": "gcphost@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
