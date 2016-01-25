@@ -12,4 +12,4 @@ The HTML minifier is very strict and may cause issues with your code. I've resol
 Register the provider
 
 
-   Askedio\Laravel100PageSpeed\PageSpeedServiceProvider::class,
+    Askedio\Laravel100PageSpeed\PageSpeedServiceProvider::class,
