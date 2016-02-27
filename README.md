@@ -6,7 +6,7 @@ The HTML minifier is very strict and may cause issues with your code. I've resol
 
 # Install
 
-    composer require gcphost/laravel-100-page-speed
+    composer require gcphost/laravel-100-page-speed:dev-master
   
 
 Register the provider
