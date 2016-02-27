@@ -1,5 +1,5 @@
 <?php
 
 return [
-  'level' => 'basic'
+  'level' => 'basic',
 ];
