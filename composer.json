@@ -1,14 +1,16 @@
 {
     "name": "askedio/laravel-100-page-speed",
     "description": "100 Page Speed Module for Laravel 5",
-    "type": "library",
+    "keywords": ["laravel"],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "william bowman",
-            "email": "gcphost@gmail.com"
+    "type": "library",
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*"
+     },
+    "autoload": {
+        "psr-4": {
+            "Askedio\\Laravel100PageSpeed\\": "src/"
         }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+    }
 }
